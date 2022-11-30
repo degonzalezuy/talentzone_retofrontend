@@ -1,14 +1,16 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<mat-toolbar-row style="background-color: 333;" class="main-app-toolbar">
+<mat-toolbar color="primary" class="main-app-toolbar">
   <h1>
     <mat-icon class="main-icon">shopping_basket</mat-icon>
     <span>Welcome to the best Store</span>
   </h1>
   <button mat-button routerLink="/"><h2>Home</h2></button>
   <button mat-button routerLink="/about"><h2>About</h2></button>
-</mat-toolbar-row>
-
+</mat-toolbar>
+<div class="pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Lista de artículos disponibles</h1>
+</div>
 <router-outlet></router-outlet>
 
 

@@ -8,7 +8,10 @@
   position: static;
   top: 0;
   z-index: 999;
-  color:black;
-  text-shadow: 2px;
-  
+  color:antiquewhite;
+  text-shadow: 2px; 
+}
+
+.main-app-toolbar:hover{
+  color:chartreuse;
 }
