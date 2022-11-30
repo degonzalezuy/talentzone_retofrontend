@@ -1,0 +1,19 @@
+
+.e-product-card {
+  margin-top: 20px;
+  max-width: 350px;
+}
+
+img.e-product-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+div.app-products-div {
+  margin-top: 57px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
