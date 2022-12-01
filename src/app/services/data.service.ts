@@ -15,7 +15,8 @@ export class DataService {
     return this.httpClient.get<ProductDTO[]>(this.REST_API_SERVER);
   }
 
- public getProducts(id:number): Observable<ProductDTO[]>{
-  return this.httpClient.get<ProductDTO[]>(environment.REST_API_SERVER);
- }
+ /*public getProducts(id:string): Observable<ProductDTO>{
+  return this.httpClient.get<ProductDTO[]>(environment.REST_API_SERVER)
+    .subscribe((products => products.find(product=>product.id==id)));
+ }*/
 }
