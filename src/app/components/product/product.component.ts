@@ -10,27 +10,29 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class ProductComponent implements OnInit {
   idProduct: string='';
-  product: ProductDTO;
-  products:[];
+
+  products:ProductDTO[];
   constructor(
     private dataService: DataService,
     private router: Router,
     private route: ActivatedRoute
   ) {
-    this.dataService.sendGetRequest().subscribe((data: any) => {
+    this.route.params.subscribe((params) => {
+      this.idProduct= params['id'];
+    })
+    
+    this.dataService.sendGetRequest().subscribe((data: ProductDTO[]) => {
       console.log(data);
-      this.products = data;
+      this.products = data.filter(p => p.id== this.idProduct);
+
+      
     });
 
     
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      this.idProduct= params['id'];
-      //this.dataService.sendGetRequest().subscribe(elements => elements.find(element => element.id==this.idProduct));
-      //this.product = this.getProduct(this.idProduct);
-    })
+
   }
 
 
